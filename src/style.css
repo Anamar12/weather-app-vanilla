@@ -23,6 +23,7 @@ li {
     font-size: 16px;
     font-weight: 100;
     line-height: 20px;
+    text-transform: capitalize;
 }
 
 .weather-app-wrapper {
@@ -50,7 +51,7 @@ li {
 }
 
 .weather-temperature strong {
-    color: #202124 ;
+    color: #202124;
     font-size: 60px;
     font-weight: 400;
     line-height: 1;
@@ -62,8 +63,11 @@ li {
     top: -32px;
 }
 
-.units a {
+a {
     text-decoration: none;
-    
-
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
