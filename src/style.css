@@ -74,3 +74,11 @@ a:hover {
     text-decoration: underline;
 }
 
+.weather-temperature .active {
+    color: #202124;
+    cursor: default;
+}
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
