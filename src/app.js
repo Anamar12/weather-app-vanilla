@@ -42,7 +42,7 @@ function displayForecast(response) {
           <img 
           src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" 
           alt="" 
-          width="44" />
+          width="55" />
           <div class="weather-forecast-temperature">
            <span class="weather-forecast-temperature-max">
              ${Math.round(forecastDay.temp.max)}°
@@ -108,5 +108,21 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function searchLocation(position) {
+    let apiKey = "8a6d72f8c89473f99e31152caddb4270";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+    console.log(apiUrl);
+  }
+  
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+  
+  let currentLocationButton = document.querySelector("#current-location-button");
+  currentLocationButton.addEventListener("click", getCurrentLocation);
+  
 
 search("London");

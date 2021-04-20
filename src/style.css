@@ -1,9 +1,9 @@
 body {
-    font-family: arial, sans-serif; 
+    font-family: 'Frijole', cursive;
 }
 
 h1 {
-    color: #202120;
+    color: #000;
     font-size: 24px;
     font-weight: 100;
     line-height: 28px;
@@ -19,7 +19,7 @@ li {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: #70757a;
+    color: rgb(44, 41, 41);
     font-size: 16px;
     font-weight: 100;
     line-height: 20px;
@@ -36,8 +36,17 @@ li:first-letter {
 
 .weather-app {
     padding: 20px;
-    border: 1px solid #b3b2b2;
-    border-radius: 5px;
+    border: 3px solid #423a64;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: block;
+    box-shadow: 5px 5px 10px 5px rgb(57 57 58 / 30%);
+    background-color: #b8a5dd;
+    background-image: linear-gradient(315deg, #a9a8e7 0%, #78a5da 74%);
+    opacity: 0.9;
+    
 }
 
 .main-info {
@@ -68,6 +77,13 @@ li:first-letter {
 
 a {
     text-decoration: none;
+    color: #3d2c79;
+    font-size: 15px;
+    
+}
+
+li .fas {
+    color: rgb(28, 28, 80);
 }
 
 a:hover {
@@ -87,6 +103,7 @@ a:hover {
     margin-top: 20px;
     text-align: center; 
     color: #000000;
+    padding-bottom: 15px;
 }
 
 .weather-forecast-date {
@@ -102,3 +119,45 @@ a:hover {
     font-size: 13px;
 }
 
+
+.btn-primary {
+    transition: 0.15ms ease-in-out;
+    opacity: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #007bff;
+    background: 0.7;
+    border-color: #007bff;
+    color: black;  
+  }
+
+  
+.condition {
+    padding-bottom: 25px;
+}
+
+.humidity {
+    padding-bottom: 25px;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+  
+  @media (min-aspect-ratio: 16/9) {
+    #background {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    #background {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
